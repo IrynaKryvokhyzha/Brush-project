@@ -1,0 +1,43 @@
+.filter-component{
+	position: fixed;
+	top: 0;
+	right: -40%;
+	width: 40%;
+	height: 100%;
+	background-color: #fff;
+	padding: 20px 50px 30px 50px;
+	overflow: auto;
+	transition: all 0.5s ease-in-out;
+	z-index: 10;
+	@media (max-width: 991px) {
+		right: -60%;
+		width: 60%;
+	}
+	@media (max-width: 767.98px) {
+		display: none;
+	}
+}
+.filter-component--visible{
+	right: 0;
+
+
+}
+.search-icon{
+	z-index: 5;
+	align-self: center;
+	padding-right: 5px;
+
+}
+
+.open-filter{
+	display: block;
+	padding-left: 15px;
+	@media (max-width: 767.98px) {
+		display: none;
+	}
+}
+.close-filter{
+	display: block;
+	font-size: 32px;
+	font-weight: 200;
+}

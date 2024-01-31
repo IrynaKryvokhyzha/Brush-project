@@ -1,0 +1,40 @@
+.message{
+	color: red;
+	font-size: 14px;
+	align-self: start;
+}
+form{
+	border: 3px solid transparent;
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow:rgba(197, 212, 200, 0.5) 0px 8px 24px, rgba(175, 203, 180, 0.5) 0px 16px 56px, rgba(168, 236, 179, 0.5) 0px 24px 80px;
+}
+label{
+	align-self: center;
+
+}
+input{
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: flex;
+	border: 1px solid #6b6a6a;
+	border-radius: 5px;
+	box-sizing: border-box;
+
+}
+.loader{
+	padding-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+.select{
+
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: flex;
+	border: 1px solid #6b6a6a;
+	border-radius: 5px;
+	box-sizing: border-box;
+}

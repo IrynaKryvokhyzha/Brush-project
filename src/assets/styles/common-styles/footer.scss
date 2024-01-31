@@ -1,0 +1,81 @@
+.footer {
+
+	//.footer__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		padding-top: 30px;
+		
+		
+	}
+}
+.footer-page{
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+
+}
+
+.footer-top {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	column-gap: 10px;
+	
+
+
+		// .footer-top__customer-care
+
+		&__customer-care {
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+			
+		}
+
+		// .footer-top__shipping
+
+		&__shipping {
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+		}
+
+		// .footer-top__legal-area
+
+		&__legal-area {
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+		}
+
+		// .footer-top__connect
+
+		&__connect {
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+		}
+
+
+			// .footer-top__item
+	
+			&__item {
+				@media (any-hover: hover){
+					&:hover{
+						color: rgb(77, 76, 76);
+					}
+				}
+			}
+	
+}
+.insta {
+	font-size: 24px;
+}
+.footer-bottom {
+	align-self: center;
+	
+}
