@@ -2,30 +2,43 @@
 
 	//.footer__container
 	&__container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
 		padding-top: 30px;
-		
-		
+		padding-left: 20px;
+		margin-bottom: 20px;
+
 	}
 }
 .footer-page{
-display: flex;
-flex-direction: column;
-justify-content: center;
-
 
 }
 
 .footer-top {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	column-gap: 10px;
-	
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-content: space-between;
+	column-gap: 0px;
+	row-gap: 10px;
+	@media (max-width: 767.98px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	//заховати футер у spoller
 
+	@media (max-width: 500px) {
+		grid-template-columns: auto;
+		
+		
+	}
+	// .footer-top__item
+		
+	&__item {
+		align-self: flex-start;
+
+		@media (any-hover: hover){
+			&:hover{
+				color: rgb(77, 76, 76);
+			}
+		}
+	}
 
 		// .footer-top__customer-care
 
@@ -33,7 +46,8 @@ justify-content: center;
 			display: flex;
 			flex-direction: column;
 			row-gap: 10px;
-			
+			align-self: flex-start;
+
 		}
 
 		// .footer-top__shipping
@@ -42,6 +56,8 @@ justify-content: center;
 			display: flex;
 			flex-direction: column;
 			row-gap: 10px;
+			align-self: flex-start;
+
 		}
 
 		// .footer-top__legal-area
@@ -50,6 +66,7 @@ justify-content: center;
 			display: flex;
 			flex-direction: column;
 			row-gap: 10px;
+			align-items: flex-start;
 		}
 
 		// .footer-top__connect
@@ -58,22 +75,19 @@ justify-content: center;
 			display: flex;
 			flex-direction: column;
 			row-gap: 10px;
+			align-self: flex-start;
 		}
 
 
-			// .footer-top__item
-	
-			&__item {
-				@media (any-hover: hover){
-					&:hover{
-						color: rgb(77, 76, 76);
-					}
-				}
-			}
+			
 	
 }
 .insta {
 	font-size: 24px;
+	align-self: center;
+	@media (max-width: 767.98px) {
+		align-self: flex-start;
+	}
 }
 .footer-bottom {
 	align-self: center;
