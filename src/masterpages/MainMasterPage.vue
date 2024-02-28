@@ -4,14 +4,14 @@
 				<div class="header__container">
 					<div class="header__menu menu">
 						<nav :class="{ 'menu__body--visible':sidebarVisible}" class="menu__body">
-							<div class="menu__list">
-								<router-link class="menu__item" to="/"><span class="menu__link">{{$t('menu.home')}}</span></router-link> 
-								<router-link class="menu__item" :to="{name:'my-shop'}"><span class="menu__link">{{$t('menu.my-shop')}}</span></router-link> 
-								<router-link class="menu__item" :to="{name:'about'}"><span class="menu__link">{{$t('menu.about')}}</span></router-link>
-								<router-link class="menu__item" :to="{name:'contact-us'}"><span class="menu__link">{{$t('menu.contact-us')}}</span></router-link>
+							<ul class="menu__list">
+								<li class="menu__item"><router-link  to="/"><span class="menu__link">{{$t('menu.home')}}</span></router-link> </li>
+								<li class="menu__item"><router-link  :to="{name:'my-shop'}"><span class="menu__link">{{$t('menu.my-shop')}}</span></router-link> </li>
+								<li class="menu__item"><router-link  :to="{name:'about'}"><span class="menu__link">{{$t('menu.about')}}</span></router-link></li>
+								<li class="menu__item"><router-link  :to="{name:'contact-us'}"><span class="menu__link">{{$t('menu.contact-us')}}</span></router-link></li>
 								<!-- <router-link class="menu__item" :to="{name:'users'}"><span class="menu__link">{{$t('menu.users')}}</span></router-link> -->
 								<button class="close-menu-list" @click="showSideBar"><font-awesome-icon :icon="['fas', 'xmark']" /></button>
-							</div>
+							</ul>
 						</nav>
 						<button  class="open-menu-list" @click="showSideBar"><font-awesome-icon :icon="['fas', 'bars']" /></button>
 					</div>
@@ -127,6 +127,11 @@ import FooterComponent from '../components/FooterComponent.vue';
         },
 		  showSideBar(){
 			this.sidebarVisible = !this.sidebarVisible
+			if (this.sidebarVisible) {
+       			 document.body.classList.add('no-scroll');
+				} else {
+					document.body.classList.remove('no-scroll');
+				}
 		  },
 		  onSignUp(){
 			this.$router.push({

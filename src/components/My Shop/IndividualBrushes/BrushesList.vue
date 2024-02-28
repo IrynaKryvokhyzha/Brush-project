@@ -1,6 +1,6 @@
 <template>
 	<main-master-page>
-	<section class="brushes__container">
+	<article class="brushes__container">
 		<div class="filter">
 			<label >
 				<input v-model="search" placeholder="Search" class="search-input">
@@ -52,7 +52,7 @@
 			</div>
 		</article> 
 		<v-btn v-if="userPermissions.add" class="button" @click="onAddBrush">{{$t('product.titles.addProduct')}}</v-btn>
-	</section> 
+	</article> 
 </main-master-page>
 </template>
 

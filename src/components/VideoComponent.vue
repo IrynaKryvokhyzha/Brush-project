@@ -107,6 +107,8 @@
 		text-transform: uppercase;
 		text-align: center;
 		line-height: 1.3;
+		padding-left: 5px;
+		padding-right: 5px;
 
 		@media (max-width: 1035px) {
 			font-size: 48px;
@@ -126,9 +128,13 @@
 		@media (max-width: 424px) {
 			margin-top: -260px;
 		}
-		@media (max-width: 278px) {
+		@media (max-width: 388px) {
 			margin-top: -300px;
 		}
+		@media (max-width: 313px) {
+			margin-top: -350px;
+		}
+
 	}
 
 	// .video__subheader

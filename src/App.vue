@@ -9,7 +9,17 @@
 <script>
 </script>
 <style lang="scss">
-@import './assets/styles'
+@import './assets/styles';
 
-
+nav {
+	padding: 30px;
+ 
+	a {
+	 &.router-link-exact-active {
+		 color: white;
+	  }
+ 
+	 
+	}
+}
 </style>

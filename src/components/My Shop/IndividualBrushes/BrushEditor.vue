@@ -1,6 +1,6 @@
 <template>
 	
-		<section class="brush__container">
+		<article class="brush__container">
 			<form class="brush-item ">
 				<div >
 					<label>
@@ -27,7 +27,7 @@
 					<v-btn class="button" @click="onBrushList">{{$t('button.productList')}}</v-btn>
 				</div>
 			</form>
-		</section>
+		</article>
 
 </template>
 

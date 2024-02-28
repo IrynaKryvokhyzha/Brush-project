@@ -23,7 +23,9 @@ body{
 	font-size: 16px;
 
 }
-
+.no-scroll{
+	overflow: hidden;
+}
 
 // (i) Стилі будуть застосовуватись до
 // всіх класів, що містять *__container
