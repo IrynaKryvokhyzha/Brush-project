@@ -58,7 +58,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import MainMasterPage from '../../../masterpages/MainMasterPage.vue';
+import MainMasterPage from '@/masterpages/MainMasterPage.vue';
 
 
 	export default {
