@@ -49,17 +49,13 @@ import MainMasterPage from '@/masterpages/MainMasterPage.vue';
 	// .contacts__container
 
 	&__container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	@media (max-width: 991px) {
-		margin-top: -25px;
-	}
-	@media (max-width: 767.98px) {
-		margin-top: -50px;
+		padding-top: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	
 
-	}
 			}
 }
 .contacts-page{

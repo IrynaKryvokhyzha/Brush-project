@@ -54,19 +54,17 @@ import { mapGetters, mapActions} from 'vuex';
 		grid-template-columns: repeat(3,1fr);
 		justify-content: center;
 		gap: 20px;
-
+		padding-top: 20px;
 		@media (max-width: 1320px) {
 			grid-template-columns: repeat(2,1fr);
 		}
 		@media (max-width: 991px) {
-			margin-top: -20px;
 			row-gap: 5px;
 		}
 		@media (max-width: 876px) {
 			grid-template-columns: auto;
 		}
 		@media (max-width: 767.98px){
-			margin-top: -50px;
 		} 
 		
 		

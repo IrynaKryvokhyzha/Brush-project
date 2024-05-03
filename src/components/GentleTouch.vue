@@ -39,14 +39,9 @@
 <style lang="scss" scoped>
 .gentle-touch {
 
-
-
-
 	// .gentle-touch__item
 
 	&__item {
-
-
 
 	}
 }
@@ -83,18 +78,15 @@
 
 	&__image {
 		flex: 1;
-		
 		position: relative;
-		
 		img{
 			position: absolute;
 			top: 0;
 			right: 0;
 			width: 100%;
 			object-fit: cover;
+			max-width: 100%;
 			max-height: 100%;
-			
-
 		}
 	}
 }

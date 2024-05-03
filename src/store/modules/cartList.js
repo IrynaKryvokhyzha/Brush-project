@@ -1,7 +1,7 @@
 export default{
 	namespaced: true,
 	state: {
-		cartList:[]
+		cartList:[],
 	},
 
 	getters: {
@@ -21,6 +21,7 @@ export default{
 			const itemExists = state.cartList.find((item) => item.id == itemId)
 			if(itemExists){
 				itemExists.quantity += 1
+				
 			}else {
 				const newItem = {
 					id: itemId,
@@ -30,6 +31,7 @@ export default{
 			state.cartList.push(newItem)
 
 			}
+			
 		},
 		removeItemFromCartList(state, itemId){
 			state.cartList = state.cartList.filter((item)=>item.id !==itemId)

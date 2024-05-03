@@ -40,18 +40,14 @@ import MainMasterPage from '@/masterpages/MainMasterPage.vue';
 	// .about__container
 
 	&__container {
-		padding-top: 70px;
+		padding-top: 30px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 30px;
 
-		@media (max-width: 767.98px) {
-		padding-top: 0;
 
-
-		}
 	}
 }
 .about-us {

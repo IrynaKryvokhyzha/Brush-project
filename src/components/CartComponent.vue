@@ -34,14 +34,15 @@ import { mapGetters, mapActions } from 'vuex';
 
 	export default {
 		name:'CartComponent',
-
-
+		
 	 computed: {
 		...mapGetters('brushItems',['getBrushList', 'getBrushById']),
 		...mapGetters('procreateItems',['getSetItemsList']),
 		...mapGetters('travelItems',['getTravelKitItemsList']),
 		...mapGetters('currencyList',['getCurrencyTitle', 'getCurrentPrice', 'getCurrencyRate']),
-		...mapGetters('cartList',['getCartList', 'getItemById'])
+		...mapGetters('cartList',['getCartList', 'getItemById']),
+
+		
 	 },
 
 	 created() {

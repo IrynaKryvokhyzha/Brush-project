@@ -39,12 +39,11 @@
 						<div v-else class="sign__item">
 							<a class="user__button"  @click="onLogin" ><font-awesome-icon :icon="['far', 'user']" /></a>
 						</div>
-	
-
 						<button  class="open-filter" @click="toSearch"><font-awesome-icon :icon="['fas', 'magnifying-glass']" /></button>
-
-						<button class="cart" @click="toCart"><font-awesome-icon :icon="['fas', 'cart-shopping']" /></button>
-						
+						<button class="cart" @click="toCart">
+							<font-awesome-icon :icon="['fas', 'cart-shopping']" />
+							<span v-if="cartItemCount > 0" class="cart-item-count">{{ cartItemCount }}</span>
+						</button>
 					</div>
 					<div :class="{ 'cart-component--visible':filterVisible}" class="filter-component">
 						<brush-filter @close-filter="closeFilter"/>
@@ -87,12 +86,16 @@ import FooterComponent from '../components/FooterComponent.vue';
 			return {
 				sidebarVisible: false,
 				cartVisible: false,
-				filterVisible: false
+				filterVisible: false,
+				
 			}
 		},
 		computed: {
 			...mapGetters('auth',['getUser']),
-		
+			...mapGetters('cartList',['getCartList', 'getItemById']),
+			cartItemCount() {
+				return this.getCartList.reduce((total, item) => total + item.quantity, 0);
+  },
 		},
 		watch: {
 		error(newValue) {
@@ -107,7 +110,7 @@ import FooterComponent from '../components/FooterComponent.vue';
         this.$i18n.locale = localStorage.getItem('lastLanguage') || 'en'
         if (localStorage.getItem('lastLanguage') !== this.$i18n.locale) {
             localStorage.setItem('lastLanguage', this.$i18n.locale)
-            // window.dispatchEvent(new Event('storage'))
+            //window.dispatchEvent(new Event('storage'))
         }
         const self = this
         window.addEventListener('storage', function () {
@@ -182,14 +185,16 @@ import FooterComponent from '../components/FooterComponent.vue';
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
-
+	padding-top: 100px;
+	@media (max-width: 767.98px) {
+		padding-top: 50px;
+	}
 }
 .header{
 
 }
 .main {
 position: relative;
-	padding-top: 100px;
 	height: 100%;
 	flex: 1 0 auto;
 	flex-grow: 1;
@@ -206,10 +211,6 @@ position: relative;
 .text-center{
 	z-index: 5;
 }
-.cart{
-	align-self: center;
-	padding-left: 10px;
-}
 .currency-selector-component{
 	position: fixed;
 	bottom: 50px;
@@ -220,5 +221,21 @@ position: relative;
 .footer-component{
 
 	margin-top: auto;
+ }
+ .cart {
+	align-self: center;
+	padding-left: 10px;
+	position: relative; 
+ }
+ 
+ .cart-item-count {
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	background-color: red;
+	color: white;
+	border-radius: 50%;
+	padding: 4px;
+	font-size: 12px;
  }
 </style>
