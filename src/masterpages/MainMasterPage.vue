@@ -48,7 +48,7 @@
 					<div :class="{ 'cart-component--visible':filterVisible}" class="filter-component">
 						<brush-filter @close-filter="closeFilter"/>
 					</div>
-<!-- зробити щоб на корзинці цифра зявлялась -->
+
 					<div :class="{ 'cart-component--visible':cartVisible}" class="cart-component">
 						<cart-component @close-cart="closeCart"/>
 					</div>

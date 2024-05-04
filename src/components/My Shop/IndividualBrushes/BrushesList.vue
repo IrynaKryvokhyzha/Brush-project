@@ -67,6 +67,7 @@ import MainMasterPage from '@/masterpages/MainMasterPage.vue';
 		props: {
 			brushItem: {
 				type: Object,
+				
 
 			},
 		},
@@ -87,10 +88,6 @@ import MainMasterPage from '@/masterpages/MainMasterPage.vue';
 			}else return this.getBrushList
 		}
 	 },
-	 created () {
-		this.loadBrushList();
-
-	 },
 	 watch: {
 		error(newValue) {
 			if (newValue){
@@ -101,6 +98,11 @@ import MainMasterPage from '@/masterpages/MainMasterPage.vue';
 			
 		}
 	 },
+	 created () {
+		this.loadBrushList();
+
+	 },
+	 
 
 	 methods: {
 		...mapActions('brushItems',['loadBrushList', 'deleteItem']),
