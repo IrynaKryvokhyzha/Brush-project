@@ -181,20 +181,20 @@ import FooterComponent from '../components/FooterComponent.vue';
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
-	padding-top: 100px;
-	@media (max-width: 767.98px) {
-		padding-top: 50px;
-	}
+
 }
 .header{
 
 }
 .main {
-position: relative;
+   position: relative;
 	height: 100%;
 	flex: 1;
 	flex-grow: 1;
-
+   padding-top: 100px;
+	@media (max-width: 767.98px) {
+		padding-top: 50px;
+	}
 		}
 
 
@@ -214,10 +214,7 @@ position: relative;
 	color: gray;
 	z-index: 999;
 }
-.footer-component{
 
-	margin-top: auto;
- }
  .cart {
 	align-self: center;
 	padding-left: 10px;

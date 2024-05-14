@@ -1,6 +1,6 @@
 <template>
 	<div>
-<MainMasterPage>
+<main-master-page>
 	<div class="contacts__container">
 		<div class="contacts-page">
 			<h1>{{$t('menu.contact-us')}}</h1>
@@ -28,7 +28,7 @@
 				<button class="rounded-button">{{$t('button.submit')}}</button>
 			</div>
 		</div>
-</MainMasterPage>
+</main-master-page>
 	</div>
 </template>
 
