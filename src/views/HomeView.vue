@@ -1,6 +1,5 @@
 <template>
-  <div class="wrapper">
-		<main-master-page class="main-master">
+		<main-master-page>
 			<div>
 				<video-component class="video"/>
 			</div>	
@@ -17,7 +16,6 @@
 			
 		</main-master-page>
 		
-  </div>
 </template>
 
 <script>
