@@ -1,83 +1,122 @@
-.button{
-	border: 2px solid transparent;
-	border-radius: 5px;
-	padding: 5px 10px;
-	box-shadow: 5px 5px 5px 1px rgb(84, 109, 91);
-	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	text-transform: uppercase;
-	display: inline-block;
-	align-items: center;
-	line-height: 1;
-	background-color: rgba(105, 134, 111, 0.5);
-	&:disabled{
-		background-color: rgb(215, 215, 215);
-		box-shadow:none;
-		@media (any-hover: hover){
-			&:hover{
-				background-color:  rgb(215, 215, 215);
-				box-shadow:none;
-			}
-		}
-	}
+.button {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: 5px 5px 5px 1px rgb(84, 109, 91);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  display: inline-block;
+  align-items: center;
+  line-height: 1;
+  background-color: rgba(105, 134, 111, 0.5);
+  &:disabled {
+    background-color: rgb(215, 215, 215);
+    box-shadow: none;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgb(215, 215, 215);
+        box-shadow: none;
+      }
+    }
+  }
 
-	@media (any-hover: hover){
-		&:hover{
-			box-shadow: 5px 5px 5px 1px rgb(111, 136, 115);
-			transition: opacity 0.2s ease-in-out;
-			background-color: rgba(128, 168, 136, 0.5);
-		}
-	}
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 5px 5px 5px 1px rgb(111, 136, 115);
+      transition: opacity 0.2s ease-in-out;
+      background-color: rgba(128, 168, 136, 0.5);
+    }
+  }
 }
 
-.item__button{
-	background-color: rgba(45, 115, 58, 0.5);
+.item__button {
+  background-color: rgba(45, 115, 58, 0.5);
 }
 
 .login-button-underlined {
-	text-decoration: underline;
-	color: green;
+  text-decoration: underline;
+  color: green;
 }
 .google-button {
-	//background: linear-gradient(-120deg, #34a853, #fbbc05, #ea4335) no-repeat;
-	position: relative;
-	box-shadow: none;
-	padding: 10px 30px 10px 50px;
-	border-radius: 25px;
-	background-color: #fff;
-	border: 2px solid rgba(105, 134, 111, 0.5);
-	text-align: center;
-	@media (any-hover: hover){
-		&:hover{
-			background-color:rgba(113, 160, 121, 0.5);
-		}
-	}
-	//rgb(105, 134, 111);
-	&::before{
-		content: '.';
-		width: 25px;
-		height: 25px;
-		position: absolute;
-		top: 15%;
-		left: 5%;
-		background-image: url('@/images/google.svg');
-		background-size: 25px 25px;
-		border-radius: 5px;
-		z-index: 5;
-	}
-
+  //background: linear-gradient(-120deg, #34a853, #fbbc05, #ea4335) no-repeat;
+  position: relative;
+  box-shadow: none;
+  padding: 10px 30px 10px 50px;
+  border-radius: 25px;
+  background-color: #fff;
+  border: 2px solid rgba(105, 134, 111, 0.5);
+  text-align: center;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: rgba(113, 160, 121, 0.5);
+    }
+  }
+  //rgb(105, 134, 111);
+  &::before {
+    content: ".";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    background-image: url("@/images/google.svg");
+    background-size: 25px 25px;
+    border-radius: 5px;
+    z-index: 5;
+  }
 }
-.rounded-button{
-	border: 2px solid black;
-		padding: 20px 50px;
-		border-radius: 30px;
-		text-transform: uppercase;
-		transition: all 0.3s;
-		background-color: black;
-		color: #fff;
-		@media (any-hover: hover){
-			&:hover{
-				background-color: #fff;
-				color: #000;
-			}
-		}
-	}
+.rounded-button {
+  border: 2px solid black;
+  padding: 20px 50px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  background-color: black;
+  color: #fff;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}
+.button-white {
+  border: 2px solid black;
+  padding: 20px 50px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: black;
+      color: #fff;
+    }
+  }
+}
+.button-black {
+  border: 2px solid black;
+  background-color: black;
+  color: #fff;
+  padding: 20px 50px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  @media (any-hover: hover) {
+    &:hover {
+      border: 2px solid black;
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}
+.button-remove {
+  align-self: start;
+  text-decoration: underline;
+  transition: all 0.3s;
+  align-self: flex-end;
+  @media (any-hover: hover) {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

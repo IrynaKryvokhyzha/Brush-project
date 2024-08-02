@@ -146,7 +146,9 @@ const routes = [
       requireAuth: false,
     },
     component: () =>
-      import(/* webpackChunkName: "cart" */ "@/components/CartComponent.vue"),
+      import(
+        /* webpackChunkName: "cart" */ "@/components/cart/CartComponent.vue"
+      ),
   },
   {
     path: "/brush-precautions",
@@ -178,6 +180,17 @@ const routes = [
     },
     component: () =>
       import(/* webpackChunkName: "my-account" */ "../views/MyAccount.vue"),
+  },
+  {
+    path: "/payment",
+    name: "payment",
+    //  meta: {
+    //    requireAuth: true,
+    //  },
+    component: () =>
+      import(
+        /* webpackChunkName: "payment" */ "@/components/PaymentComponent.vue"
+      ),
   },
   {
     path: "/:pathMatch(.*)*",
