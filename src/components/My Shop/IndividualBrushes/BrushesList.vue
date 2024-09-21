@@ -35,7 +35,11 @@
                   variant="text"
                   @click="handleButtonTitle(item.id)"
                 >
-                  {{ buttonStates[item.id] ? "Added" : $t("button.addToCart") }}
+                  {{
+                    buttonStates[item.id]
+                      ? $t("button.added")
+                      : $t("button.addToCart")
+                  }}
                 </v-btn>
               </div>
               <div>
